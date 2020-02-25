@@ -28,3 +28,24 @@ people.append('luke')
 
 for name in people:
     print(name)
+
+class Person:
+    def __init__(self, name, age, gender):
+        self.name = name
+        self.age = str(age)
+        self.gender = gender
+    
+    def whoIAm(self):
+        print("hello, my name is" + ", " + self.name + ", " + "and I am a" + " " + self.age + "-year-old" + " " + self.gender + ".")
+
+firstPerson = Person('luke', 39, 'male')
+firstPerson.whoIAm()
+
+def repLetters(string):
+    repString = ''
+    for letter in string:
+        letter += letter
+        repString += letter
+    return repString
+
+print(repLetters('dude'))
